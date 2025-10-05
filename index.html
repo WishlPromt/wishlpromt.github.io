@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Wishl Promt">
+    <meta title="Wishl Promt Bio">
+    <!--Styles-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base_styles.css">
+    <link rel="stylesheet" href="styles/represent_styles.css">
+    <link rel="stylesheet" href="styles/projects_styles.css">
+    <link rel="stylesheet" href="styles/project_popup_styles.css">
+    <link rel="stylesheet" href="styles/lock_scroll_styles.css">
+    <!--Scripts-->
+    <script type="module" src="scripts/logos_switcher.js"></script>
+    <script type="module" src="scripts/projects_grid_builder.js"></script>
+    <script type="module" src="scripts/gradient_transition.js"></script>
+    <script type="module" src="scripts/popup.js"></script>
+    <title> Wishl Promt Bio </title>
+</head>
+<body>
+    <main>
+        <div class="represent">
+            <div class="represent__links">
+                <a href="https://github.com/WishlPromt" id="github_link">
+                    <img src="images/icons/github_logo.png" />
+                </a>
+                <a href="https://t.me/WishlPromtChnl" id="tg_channel_link">
+                    <img src="images/icons/Telegram_logo.webp" />
+                </a>
+                <a href="https://www.youtube.com/@wishlpromt" id="youtube_link">
+                    <img src="images/icons/youtube_logo.png" />
+                </a>
+                <a href="https://steamcommunity.com/id/wishlpromt/" id="steam_link">
+                    <img src="images/icons/steam_logo.png" />
+                </a>
+            </div>
+
+            <div class="represent__profile">
+                <img id="logo" 
+                src="images/logos/WishlChannelAvatar.svg"
+                alt="logo">
+                <div class="info">
+                    <h1 id="nickname"> Wishl Promt </h1> 
+                    <p id="bio">
+                        Интернет-бабизян, пытающийся сделать что-нибудь прикольное
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bio">
+            <h1>О себе</h1>
+            <hr>
+            <p>
+                Уже пятый год пытаюсь лезть в разные сферы, не очень успешно, но мне все равно нравится :&rpar;<br>
+                Сейчас больше фокусируюсь на <a href="https://unity.com/ru">Unity</a> и <a href="https://dotnet.microsoft.com/ru-ru/languages/csharp">C#</a>, пиксель-артом увлекаюсь, сайт этот пишу. 
+                Также писал на <a href="https://www.python.org/">Python</a>, пробовал некоторые языки(Java, TS/JS), но в них не продвинулся, ибо лень. 
+                До юньки геймдевил на <a href="https://www.construct.net/en">Constuct</a>, <a href="https://godotengine.org/">Godot</a>.
+            </p>
+        </div>
+
+        <div class="projects">
+            <h1>Проекты</h1>
+            <hr>
+        </div>
+        
+        <div class="popup-overlay">
+            <div class="project-popup">
+                <h1 class="project-popup__name"></h1>
+                <div class="project-popup__fields">
+                </div>
+
+                <div class="project-popup__project-representation">
+                    <img class="project-representation__image">
+                    
+                    <div class="project-representation__side">
+                        <div class="side__info">
+                            
+                        </div>                        
+                    </div>
+                </div>
+
+                <p class="project-popup__description"></p>
+                
+                <a class="project-popup__source">
+                    Source code
+                    <img src="images/icons/github_logo.png" alt="github logo">
+                </a>
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html> 

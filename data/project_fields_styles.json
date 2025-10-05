@@ -1,0 +1,51 @@
+{
+    "type": {
+        "background-color": "#6658BF",
+        "color": "#1C1642"
+    },
+    "development_period": {
+        "background-color": "#ACA3AC",
+        "color": "#221D22"
+    },
+
+    "released": {
+        "background-color": "#54B367",
+        "color": "#122E17"
+    },
+    "completed": { 
+        "background-color": "#AF5CCB",
+        "color": "#1F0F25"
+    },
+    "discontinued": {
+        "background-color": "#BF5858",
+        "color": "#270404"
+    },
+    "paused": {
+        "background-color": "#3E5EBD",
+        "color": "#111D40"
+    },
+    "in_development": {
+        "background-color": "#DCBB2A",
+        "color": "#8E3912"
+    },
+    "resumed": {
+        "background-color": "#C95F32",
+        "color": "#4E1700"
+    },
+
+    "pl": {
+        "color": "green"
+    },
+    "engine": {
+        "color": "#7FB9E6"
+    },
+    "last_version": {
+        "color": "#AF7FE6"
+    },
+    "platforms": {
+        "color": "#2D4EDF"
+    },
+    "frameworks": {
+        "color": "#FF7135"
+    }
+}

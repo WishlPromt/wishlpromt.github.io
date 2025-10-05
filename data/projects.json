@@ -1,0 +1,60 @@
+[
+    {
+        "id": "secrets_of_anderia",
+        "name": "Secrets of Anderia",
+        "img_src": "images/projects/secrets_of_anderia/soa_screen.png",
+        "img_alt": "Скрин из игры",
+        "about": "Метроидвания, делалась на Unity в течение полугода. Девлоги в тгк сбрасывал",
+        "description": "",
+
+        "type": "game",
+        "status": "discontinued",
+        "development_period": "20.11.2024 - 23.05.2025", 
+        "source": "https://github.com/WishlPromt/Secrets-of-Anderia",
+
+        "info": {
+            "PL": "C#",
+            "engine": "Unity",
+            "last_version": "0.2.1",
+            "platforms": "PC"
+        }
+    },
+
+    {
+        "id": "wishl_promt_bio",
+        "name": "WishlPromtBio",
+        "img_src": "images/projects/wishl_promt_bio/wishl_promt_bio.png",
+        "img_alt": "Этот сайт",
+        "about": "Мой первый сайт. Глазам больно, но моим мозгам прикольно",
+        "description": "",
+
+        "type": "website",
+        "status": "released",
+        "development_period":"17.09.2025 - ...",
+        "source": "",
+
+        "info": {
+            "frontend": "HTML + CSS + JavaScript"
+        }
+    },
+
+    {
+        "id": "nika_chan_bot",
+        "name": "NikaChanBot",
+        "img_src": "images/projects/nika_chan_bot/nika_chan_bot_avatar.png",
+        "img_alt": "Аватарка бота в тг",
+        "about": "Телеграм-бот для чатов, была интегрирована LLM, хоть и криво",
+        "description": "",
+        
+        "type": "bot",
+        "status": "paused",
+        "development_period": "02.2025 - 04.2025",
+        "source": "",
+
+        "info": {
+            "PL": "Python",
+            "platforms": "Telegram",
+            "frameworks": "aiogram"
+        }
+    }
+]

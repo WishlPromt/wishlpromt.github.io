@@ -1,0 +1,21 @@
+{
+    "type": "Тип",
+    "status": "Статус",
+    "development_period": "Период разработки",
+    "PL": "Язык",
+    "engine": "Движок",
+    "last_version": "Последняя версия",
+    "platforms": "Платформы",
+    "frameworks": "Фреймворки",
+
+    "game": "Игра",
+    "website": "Веб-сайт",
+    "bot": "Бот",
+
+    "released": "Выпущено",
+    "completed": "Завершено",
+    "discontinued": "Закрыто",
+    "paused": "Приостановлено",
+    "in_development": "В разработке",
+    "resumed": "Возобновлено"
+}

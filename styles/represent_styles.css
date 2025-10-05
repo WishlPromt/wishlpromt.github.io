@@ -1,0 +1,59 @@
+.represent__links {
+    margin: 35px;
+    display: flex;
+    background: linear-gradient(
+        rgb(68, 64, 68),
+        rgb(61, 56, 61) 
+        );
+    width:fit-content;
+    border-radius: 15px;
+}
+
+.represent__links a {
+    padding: 10px;
+    display: flex;
+}
+
+.represent__links img {
+    height: 35px;
+
+    transition: transform 0.3s ease;
+}
+
+.represent__links img:hover {
+    transform: scale(1.15);
+}
+
+.represent__profile {
+    text-align: left;
+    margin: 50px;
+    display: flex;
+}
+
+.represent__profile h1{
+    margin: 0;
+}
+
+.info {
+    padding: 0px 50px;
+    letter-spacing: 5px;
+}
+
+#logo {
+    width: 30%;
+    height: 30%;
+    border-radius: 100%;
+
+    box-shadow: 2px 8px 16px rgba(0,0,0,0.2);
+    
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+#logo:hover {
+    width:35%;
+    height:35%;
+}
+
+#nickname {
+    letter-spacing: 20px;
+}
