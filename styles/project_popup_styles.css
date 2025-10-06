@@ -31,11 +31,11 @@
 }
 
 .button-container__close-button {
-    width: 24px;
-    height: 24px;
+    width: 50px;
+    height: 50px;
     position: absolute;
-    top: 9px;
-    right: 9px;
+    top: 1%;
+    right: 1%;
     border: none;
     background: transparent;
     cursor: pointer;
@@ -47,8 +47,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 20px;
-    height: 5px;
+    width: 95%;
+    height: 10%;
     background-color: gray;
     border-radius: 3px;
 }
@@ -131,7 +131,7 @@
     transform: scale(1.15);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1280px) {
     .project-popup {
         transform: translate(-50%, -51.5%);
         width: 90%;

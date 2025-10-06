@@ -61,10 +61,13 @@
     letter-spacing: 20px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1280px) {
     .represent__links {
-        margin: 0 auto;
+        margin-left: auto;
     }   
+    .represent__links img {
+        height: 50px;
+    }
     .represent__profile {
         text-align: center;
         display: inline-block;
