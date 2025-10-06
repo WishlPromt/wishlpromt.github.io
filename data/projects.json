@@ -5,7 +5,7 @@
         "img_src": "images/projects/secrets_of_anderia/soa_screen.png",
         "img_alt": "Скрин из игры",
         "about": "Метроидвания, делалась на Unity в течение полугода. Девлоги в тгк сбрасывал",
-        "description": "",
+        "description": "Метроидвания, делалась на Unity в течение полугода. Девлоги в тгк сбрасывал",
 
         "type": "game",
         "status": "discontinued",
@@ -31,7 +31,7 @@
         "type": "website",
         "status": "released",
         "development_period":"17.09.2025 - ...",
-        "source": "",
+        "source": "https://github.com/WishlPromt/wishlpromt.github.io",
 
         "info": {
             "frontend": "HTML + CSS + JavaScript"

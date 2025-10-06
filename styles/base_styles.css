@@ -1,17 +1,31 @@
 html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 2px;
+    position: relative;
+    min-height: 100vh;
+}
+
+html::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: radial-gradient(
         circle,
         rgb(34, 34, 34),
         rgb(8, 8, 8)
         );
-    background-attachment: fixed;
+     z-index: -1;
+    
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 body {
     text-align: center;
-    margin: 1%;
 }
 
 a {
@@ -29,7 +43,8 @@ hr {
 }
 
 .represent, .projects, .bio, .project-popup {
-    margin-top: 30px;
+    margin-top: 15px;
+    width: 50%;
 
     background: radial-gradient(
         circle,
@@ -38,16 +53,16 @@ hr {
         
     );
 
-    width: 50%;
     height: fit-content;
     display: inline-block;
 
     border-radius: 30px;
 
-    color: white;
     font-size: 28px;
-    text-align: center;
     padding: 20px;
+
+    color: white;
+    text-align: center;
 }
 
 .represent, .projects, .bio, .project-popup, .links, .project_card, .project_card_img, #logo {
@@ -72,3 +87,17 @@ hr {
     border-radius: 6px;
 }
 
+@media (max-width: 1280px) {
+    .represent, .projects, .bio, .project-popup {
+        width: 92.5%;
+        padding: 15px;
+    }
+}
+@media (max-width: 720px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    html {
+        background-attachment: scroll;
+    }
+}

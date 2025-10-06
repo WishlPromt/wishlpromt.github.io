@@ -8,15 +8,11 @@ const CONFIG = {
     CARD_CLASS: "project-card",
 }
 
-function createGrid(parent, isMobile) {
+function createGrid(parent) {
     const validProjects = projects.filter(validateProject);
 
     const grid = document.createElement("div");
     grid.className = CONFIG.GRID_CLASS;
-    grid.style.display = "grid";
-    grid.style.gridTemplateColumns = 
-    `repeat(${isMobile ? CONFIG.COLUMNS_COUNT_ON_MOBILE : CONFIG.COLUMNS_COUNT_ON_DESKTOP}, 1fr)`;
-    grid.style.gap = "1rem";
 
     const gridFragment = document.createDocumentFragment();
 
@@ -91,11 +87,8 @@ document.addEventListener("DOMContentLoaded", () =>{
         return;
     }
 
-    const userAgent = navigator.userAgent;
-    const isMobile = /andoid|iphone|ipad|ipod|kindle|windows phone/i.test(userAgent);
-
     try {
-        createGrid(showcaseParent, isMobile);
+        createGrid(showcaseParent);
     } catch (error) {
         console.error(`Failed to create projects grid: ${error}`);
         showcaseParent.innerHTML = "<p>Ошибка загрузки проектов</p>";

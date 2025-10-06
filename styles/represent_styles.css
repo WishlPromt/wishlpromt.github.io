@@ -1,5 +1,5 @@
 .represent__links {
-    margin: 35px;
+    margin: 2.5%;
     display: flex;
     background: linear-gradient(
         rgb(68, 64, 68),
@@ -7,6 +7,7 @@
         );
     width:fit-content;
     border-radius: 15px;
+    box-shadow: 2px 8px 16px rgba(0,0,0,0.2);
 }
 
 .represent__links a {
@@ -26,7 +27,7 @@
 
 .represent__profile {
     text-align: left;
-    margin: 50px;
+    margin: 3%;
     display: flex;
 }
 
@@ -35,7 +36,7 @@
 }
 
 .info {
-    padding: 0px 50px;
+    padding: 0px 5%;
     letter-spacing: 5px;
 }
 
@@ -47,6 +48,8 @@
     box-shadow: 2px 8px 16px rgba(0,0,0,0.2);
     
     transition: width 0.3s ease, height 0.3s ease;
+
+    cursor: pointer;
 }
 
 #logo:hover {
@@ -56,4 +59,26 @@
 
 #nickname {
     letter-spacing: 20px;
+}
+
+@media (max-width: 720px) {
+    .represent__links {
+        margin: 0 auto;
+    }   
+    .represent__profile {
+        text-align: center;
+        display: inline-block;
+    }
+    .represent__profile h1{
+        margin: 3%;
+    }
+    #logo {
+        width: 60%;
+    }
+    #logo:hover {
+        width:85%;
+    }
+    #nickname {
+        letter-spacing: 5px;
+    }
 }

@@ -33,9 +33,7 @@ function configureProject(project) {
         fieldElement.classList.add(`fields__${field}`)
         fieldElement.textContent = `${
                 translations[project[field]] ? translations[project[field]] : project[field]
-            }`;
-        fieldElement.style.cssText = "font-size: 24px; margin-right: 10px; padding: 0px 7px; border-radius: 5px;";
-        
+            }`;        
         setCssProperties([field, project[field]], fieldElement);
 
         fieldsParent.appendChild(fieldElement);
@@ -73,7 +71,6 @@ function generateRepresentationInfo(fields, parent) {
             fieldElement.id = field;
 
             spanElement.textContent = `${translations[fields[field]] || fields[field]}`;
-            spanElement.style.fontSize = "28px";
             spanElement.style.fontWeight = "bold";
 
             setCssProperties([field.toLowerCase(), fields[field].toLowerCase()], spanElement)
@@ -128,5 +125,8 @@ document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && popupOverlay.style.display === "block")
         closePopup();
 })
+
+const closePopupButton = document.querySelector(`.${POPUP_CLASSES.closeButton}`);
+closePopupButton.onclick = closePopup;
 
 popup.addEventListener("click", (event) => event.stopPropagation());

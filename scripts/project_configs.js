@@ -7,9 +7,11 @@ export const POPUP_CLASSES = {
     development_period: "fields__development-period",
     
     image: "project-representation__image",
-    info: "side__info",
+    info: "project-representation__info",
     description: "project-popup__description",  
-    source: "project-popup__source"
+    source: "project-popup__source",
+
+    closeButton: "button-container__close-button"
 }
 
 export const REQUIRED_FIELDS = [
