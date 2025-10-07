@@ -1,6 +1,8 @@
 import paths from "../data/paths_to_logos.json" with { type: "json" }
 
 const logo = document.getElementById("logo");
+logo.setAttribute('data-clickable', 'true');
+
 
 logo.onclick = function() {
     const logoSrc = logo.getAttribute("src");
