@@ -19,6 +19,7 @@ function createGrid(parent) {
     validProjects.forEach(project => {
         const card = createCard("div", project);
         card.addEventListener("click", () => openProjectPopup(card.id));
+        card.setAttribute('data-clickable', 'true');
         gridFragment.appendChild(card);
     })
 
