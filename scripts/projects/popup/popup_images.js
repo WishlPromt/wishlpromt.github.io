@@ -62,7 +62,7 @@ export function generateImages(project) {
     }
     
     if (imagesList.length === 0)
-        newImage(undefined, project.img_src, project.img_alt);
+        newImage(project.img_src, project.img_alt);
 
     setCurrentImage(0);
 }
