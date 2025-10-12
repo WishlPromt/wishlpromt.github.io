@@ -1,5 +1,5 @@
-import projects from "../data/projects.json" with { type: "json" }
-import { openProjectPopup } from "./popup.js";
+import projects from "../../data/projects.json" with { type: "json" }
+import { openProjectPopup } from "./popup/popup.js";
 
 const CONFIG = {
     COLUMNS_COUNT_ON_DESKTOP: 3,

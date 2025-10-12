@@ -1,8 +1,9 @@
-import projects from "../data/projects.json" with { type: "json"};
-import fieldsStyles from "../data/project_fields_styles.json" with { type: "json" };
-import { lockScroll, unlockScroll } from "./lock_scroll.js";
-import { POPUP_CLASSES, REQUIRED_FIELDS, GENERATING_HEAD_FIELDS } from "./project_configs.js";
-import translations from "../data/translations.json" with { type: "json" };
+import { lockScroll, unlockScroll } from "../../lock_scroll.js";
+import { POPUP_CLASSES, REQUIRED_FIELDS, GENERATING_HEAD_FIELDS } from "../project_configs.js";
+import { generateImages, attachButtonHandlers } from "./popup_images.js";
+import projects from "../../../data/projects.json" with { type: "json"};
+import fieldsStyles from "../../../data/project_fields_styles.json" with { type: "json" };
+import translations from "../../../data/translations.json" with { type: "json" };
 
 const popupOverlay = document.querySelector(".popup-overlay");
 const popup = document.querySelector(".project-popup");
@@ -19,43 +20,48 @@ export function openProjectPopup(projectId) {
 
 function configureProject(project) {
     if (!projectIsValid(project))
-    {
         return;
-    }
 
     const projectName = document.querySelector(`.${POPUP_CLASSES.name}`);
     projectName.textContent = project.name;
 
     const fieldsParent = document.querySelector(`.${POPUP_CLASSES.fields}`)
-    fieldsParent.innerHTML = "";
-    GENERATING_HEAD_FIELDS.forEach(field => {
-        const fieldElement = document.createElement("p");
-        fieldElement.classList.add(`fields__${field}`)
-        fieldElement.textContent = `${
-                translations[project[field]] ? translations[project[field]] : project[field]
-            }`;        
-        setCssProperties([field, project[field]], fieldElement);
+    generateFields(project, fieldsParent);
 
-        fieldsParent.appendChild(fieldElement);
-    })
+    const nextButton = document.querySelector(`.${POPUP_CLASSES.nextButton}`);
+    const previousButton = document.querySelector(`.${POPUP_CLASSES.previousButton}`);
 
-    const projectImg = document.querySelector(`.${POPUP_CLASSES.image}`);
-    projectImg.src = project.img_src;
-    projectImg.alt = project.img_alt;
+    generateImages(project);
+    attachButtonHandlers(nextButton, previousButton);
     
     const projectDescription = document.querySelector(`.${POPUP_CLASSES.description}`);
     projectDescription.textContent = project.description;
 
     const sourceCode = document.querySelector(`.${POPUP_CLASSES.source}`);
-    if (sourceCode){
+    if (sourceCode) {
         sourceCode.href = "";
         if (project.source.length > 0)
             sourceCode.href = project.source;
-        }
+    }
 
     const projectInfoContainer = document.querySelector(`.${POPUP_CLASSES.info}`);
 
     generateRepresentationInfo(project.info, projectInfoContainer);
+}
+
+function generateFields(project, fieldsParent) {
+    fieldsParent.innerHTML = "";
+        GENERATING_HEAD_FIELDS.forEach(field => {
+            const fieldElement = document.createElement("p");
+            fieldElement.classList.add(`fields__${field}`)
+            fieldElement.textContent = `${
+                    translations[project[field]] || project[field]
+                }`;
+            fieldElement.title = translations[field] || field;
+            setCssProperties([field, project[field]], fieldElement);
+
+            fieldsParent.appendChild(fieldElement);
+        })
 }
 
 function generateRepresentationInfo(fields, parent) {
@@ -121,6 +127,8 @@ function closePopup() {
 
 
 popupOverlay.addEventListener("click", closePopup);
+popupOverlay.setAttribute('data-clickable', 'true');
+
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && popupOverlay.style.display === "block")
         closePopup();

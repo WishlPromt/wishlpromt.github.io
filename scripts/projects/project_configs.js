@@ -6,7 +6,10 @@ export const POPUP_CLASSES = {
     status: "pfields__status",
     development_period: "fields__development-period",
     
-    image: "project-representation__image",
+    current_image: "image-panel__current-image",
+    previousButton: "image-panel__previous-button",
+    nextButton: "image-panel__next-button",
+
     info: "project-representation__info",
     description: "project-popup__description",  
     source: "project-popup__source",

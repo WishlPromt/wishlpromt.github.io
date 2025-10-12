@@ -12,6 +12,15 @@
         "development_period": "20.11.2024 - 23.05.2025", 
         "source": "https://github.com/WishlPromt/Secrets-of-Anderia",
 
+        "images": {
+            "Yuno near campfire": "images/projects/secrets_of_anderia/soa_screen.png",
+            "Yuno fights": "images/projects/wishl_promt_bio/wishl_promt_bio.png",
+            "Main menu": "images/projects/nika_chan_bot/nika_chan_bot_avatar.png",
+            "Yufgfg": "images/projects/secrets_of_anderia/soa_screen.png",
+            "fggfghts": "images/projects/wishl_promt_bio/wishl_promt_bio.png",
+            "Maifgmenu": "images/projects/nika_chan_bot/nika_chan_bot_avatar.png"
+        },
+
         "info": {
             "PL": "C#",
             "engine": "Unity",

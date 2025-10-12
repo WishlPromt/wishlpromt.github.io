@@ -12,6 +12,7 @@ html {
 
 body {
     text-align: center;
+    user-select: none;
 }
 
 a {
@@ -29,6 +30,14 @@ a,
 [data-clickable] {
     -webkit-tap-highlight-color: transparent;
     outline: none;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 
 .projects h1, .bio h1 {

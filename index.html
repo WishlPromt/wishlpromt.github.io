@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="styles/project_popup_styles.css">
     <link rel="stylesheet" href="styles/lock_scroll_styles.css">
     <!--Scripts-->
-    <script type="module" src="scripts/logos_switcher.js"></script>
-    <script type="module" src="scripts/projects_grid_builder.js"></script>
-    <script type="module" src="scripts/gradient_transition.js"></script>
-    <script type="module" src="scripts/popup.js"></script>
+    <script type="module" src="scripts/represent/logos_switcher.js"></script>
+    <script type="module" src="scripts/projects/projects_grid_builder.js"></script>
+    <script type="module" src="scripts/projects/popup/popup.js"></script>
     <title> Wishl Promt Bio </title>
 </head>
 <body>
@@ -76,7 +75,13 @@
                 </div>
 
                 <div class="project-popup__project-representation">
-                    <img class="project-representation__image">
+                    <div class="project-representation__images">
+                        <div class="images__image-panel">
+                            <button class="image-panel__previous-button"></button>
+                            <img class="image-panel__current-image">
+                            <button class="image-panel__next-button"></button>
+                        </div>
+                    </div>
                     
                     <div class="project-representation__info">                  
                     </div>
