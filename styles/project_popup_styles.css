@@ -267,13 +267,6 @@
         margin: 0 auto;
     }
 
-    .image-panel__next-button::before,
-    .image-panel__next-button::after,
-    .image-panel__previous-button::before,
-    .image-panel__previous-button::after { 
-        width: 175%;
-    }
-
     .project-representation__info{
         width: fit-content;
         padding: 10px;
