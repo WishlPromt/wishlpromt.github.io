@@ -30,8 +30,9 @@ function configureProject(project) {
 
     const nextButton = document.querySelector(`.${POPUP_CLASSES.nextButton}`);
     const previousButton = document.querySelector(`.${POPUP_CLASSES.previousButton}`);
-
-    generateImages(project);
+    const dotsParent = document.querySelector(`.${POPUP_CLASSES.dotsParent}`);
+    
+    generateImages(project, dotsParent);
     attachButtonHandlers(nextButton, previousButton);
     
     const projectDescription = document.querySelector(`.${POPUP_CLASSES.description}`);

@@ -3,7 +3,7 @@ import { POPUP_CLASSES } from "../project_configs.js";
 const imagesList = [];
 let currentImageIndex = 0;
 
-const currentImageElement = document.querySelector(`.${POPUP_CLASSES.current_image}`);
+const currentImageElement = document.querySelector(`.${POPUP_CLASSES.currentImage}`);
 let selectedImageElement;
 
 function nextImage() {
@@ -26,15 +26,25 @@ function previousImage() {
         console.warn("Images list is empty");
 }
 
-function newImage(src, alt) {
+function newImage(src, alt, element) {
     imagesList.push({
+        element: element,
         src: src,
         alt: alt
     });
+    const index = imagesList.length-1;
+    if (element) {
+        element.addEventListener("click", () => {
+            setCurrentImage(index);
+        });
+    }
 }
 
 function setCurrentImage(index) {
     const image = imagesList[index];
+
+    if (selectedImageElement)
+        selectedImageElement.classList.remove(POPUP_CLASSES.selectedDot); 
 
     if (currentImageIndex != index)
         currentImageIndex = index;
@@ -44,20 +54,33 @@ function setCurrentImage(index) {
         return;
     }
 
+    if (image.element) {
+        image.element.classList.add(POPUP_CLASSES.selectedDot);
+        selectedImageElement = image.element;
+    }
+
     currentImageElement.src = image.src;
     currentImageElement.alt = image.alt; 
 }
 
-export function generateImages(project) {
+export function generateImages(project, dotsParent) {
     imagesList.length = 0;
     currentImageIndex = 0;
     currentImageElement.src = "";
     currentImageElement.alt = "";
+    dotsParent.innerHTML = "";
     
     if ("images" in project)
     {
         Object.entries(project.images).forEach(field => {
-            newImage(field[1], field[0]);
+            const imageDot = document.createElement("button");
+            if (dotsParent) {
+                imageDot.classList.add(POPUP_CLASSES.dot);
+                dotsParent.appendChild(imageDot);
+            }
+            console.log(imageDot);
+
+            newImage(field[1], field[0], imageDot);
         })
     }
     
