@@ -5,7 +5,7 @@
         rgb(68, 64, 68),
         rgb(61, 56, 61) 
         );
-    width:fit-content;
+    width: fit-content;
     border-radius: 15px;
     box-shadow: 2px 8px 16px rgba(0,0,0,0.2);
 }
@@ -64,7 +64,10 @@
 @media (max-width: 1280px) {
     .represent__links {
         margin: 0 auto;
-    }   
+    }
+    .represent__links img {
+        height: 40px;
+    }
     .represent__profile {
         text-align: center;
         display: inline-block;
@@ -81,7 +84,7 @@
     #nickname {
         letter-spacing: 5px;
     }
-    #bio {
-        font-size: 28px;
+    .info {
+        font-size: 24px;
     }
 }
