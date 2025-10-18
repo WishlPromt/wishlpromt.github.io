@@ -130,14 +130,14 @@
     position: absolute;
     top: 55%;
     left: 50%;
-    width: 95%;
+    width: 45px;
     height: 3%;
     background-color: gray;
     border-radius: 3px;
 }
 
 .image-panel__next-button::before {
-    transform: translate(-50%, -500%) rotate(45deg);
+    transform: translate(-50%, -30px) rotate(45deg);
 }
 
 .image-panel__next-button::after {
@@ -145,7 +145,7 @@
 }
 
 .image-panel__previous-button::before {
-    transform: translate(-50%, -500%) rotate(-45deg);
+    transform: translate(-50%, -30px) rotate(-45deg);
 }
 
 .image-panel__previous-button::after {
@@ -266,7 +266,19 @@
         height: 100px;
         margin: 0 auto;
     }
-
+    .image-panel__next-button::before,
+    .image-panel__next-button::after,
+    .image-panel__previous-button::before,
+    .image-panel__previous-button::after { 
+        width: 20px;
+    }
+    .image-panel__next-button::before
+    {
+        transform: translate(-50%, -12px) rotate(45deg);
+    }
+    .image-panel__previous-button::before {
+        transform: translate(-50%, -12px) rotate(-45deg);
+    }
     .project-representation__info{
         width: fit-content;
         padding: 10px;
