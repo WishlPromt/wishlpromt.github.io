@@ -1,9 +1,9 @@
-import { POPUP_CLASSES } from "../project_configs.js";
+import { POPUP_QUERIES } from "../project_configs.js";
 
 const imagesList = [];
 let currentImageIndex = 0;
 
-const currentImageElement = document.querySelector(`.${POPUP_CLASSES.currentImage}`);
+const currentImageElement = document.querySelector(`.${POPUP_QUERIES.currentImage}`);
 let selectedImageElement;
 
 function nextImage() {
@@ -44,7 +44,7 @@ function setCurrentImage(index) {
     const image = imagesList[index];
 
     if (selectedImageElement)
-        selectedImageElement.classList.remove(POPUP_CLASSES.selectedDot); 
+        selectedImageElement.classList.remove(POPUP_QUERIES.selectedDot); 
 
     if (currentImageIndex != index)
         currentImageIndex = index;
@@ -55,7 +55,7 @@ function setCurrentImage(index) {
     }
 
     if (image.element) {
-        image.element.classList.add(POPUP_CLASSES.selectedDot);
+        image.element.classList.add(POPUP_QUERIES.selectedDot);
         selectedImageElement = image.element;
     }
 
@@ -75,11 +75,9 @@ export function generateImages(project, dotsParent) {
         Object.entries(project.images).forEach(field => {
             const imageDot = document.createElement("button");
             if (dotsParent) {
-                imageDot.classList.add(POPUP_CLASSES.dot);
+                imageDot.classList.add(POPUP_QUERIES.dot);
                 dotsParent.appendChild(imageDot);
             }
-            console.log(imageDot);
-
             newImage(field[1], field[0], imageDot);
         })
     }

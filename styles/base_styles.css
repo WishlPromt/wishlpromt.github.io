@@ -1,3 +1,10 @@
+:root {
+    --overlay-color: rgba(0, 0, 0, 0.5);
+    --dark-purple: rgb(108, 15, 151);
+    --purple: rgb(183, 17, 216);
+    --light-purple: rgb(153, 57, 197);
+}
+
 html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 2px;
@@ -17,7 +24,11 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(183, 17, 216);
+    color: var(--purple);
+}
+
+a:hover {
+    color: var(--light-purple);
 }
 
 hr {
@@ -40,12 +51,7 @@ img {
     -o-user-drag: none;
 }
 
-.projects h1, .bio h1 {
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.represent, .projects, .bio, .project-popup {
+section {
     margin-top: 15px;
     width: 50%;
 
@@ -68,7 +74,12 @@ img {
     text-align: center;
 }
 
-.represent, .projects, .bio, .project-popup, .links, .project_card, .project_card_img, #logo {
+section .section-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+section, .links, .project_card, .project_card_img, #logo {
     border: 2px, solid, rgba(255, 255, 255, 0.185);
 }
 
@@ -91,7 +102,7 @@ img {
 }
 
 @media (max-width: 1280px) {
-    .represent, .projects, .bio, .project-popup {
+    section {
         width: 92.5%;
         padding: 15px;
     }

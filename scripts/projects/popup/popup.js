@@ -1,16 +1,17 @@
 import { lockScroll, unlockScroll } from "../../lock_scroll.js";
-import { POPUP_CLASSES, REQUIRED_FIELDS, GENERATING_HEAD_FIELDS } from "../project_configs.js";
+import { POPUP_QUERIES, REQUIRED_FIELDS, GENERATING_HEAD_FIELDS } from "../project_configs.js";
 import { generateImages, attachButtonHandlers } from "./popup_images.js";
+import { loadFile } from "./file_reader.js";
 import projects from "../../../data/projects.json" with { type: "json"};
 import fieldsStyles from "../../../data/project_fields_styles.json" with { type: "json" };
 import translations from "../../../data/translations.json" with { type: "json" };
 
-const popupOverlay = document.querySelector(".popup-overlay");
-const popup = document.querySelector(".project-popup");
+const popupOverlay = document.getElementById(POPUP_QUERIES.overlayId);
+const popup = document.getElementById(POPUP_QUERIES.popupId);
 
-export function openProjectPopup(projectId) {
+export async function openProjectPopup(projectId) {
     const project = projects.find(project => project.id === projectId);
-    configureProject(project);
+    await configureProject(project);
 
     popupOverlay.style.display = "block";
     lockScroll();
@@ -18,34 +19,40 @@ export function openProjectPopup(projectId) {
     popup.scrollTop = 0;
 }
 
-function configureProject(project) {
+async function configureProject(project) {
     if (!projectIsValid(project))
         return;
 
-    const projectName = document.querySelector(`.${POPUP_CLASSES.name}`);
+    const projectName = document.getElementById(POPUP_QUERIES.nameId);
     projectName.textContent = project.name;
 
-    const fieldsParent = document.querySelector(`.${POPUP_CLASSES.fields}`)
+    const fieldsParent = document.getElementById(POPUP_QUERIES.fieldsId);
     generateFields(project, fieldsParent);
 
-    const nextButton = document.querySelector(`.${POPUP_CLASSES.nextButton}`);
-    const previousButton = document.querySelector(`.${POPUP_CLASSES.previousButton}`);
-    const dotsParent = document.querySelector(`.${POPUP_CLASSES.dotsParent}`);
+    const nextButton = document.getElementById(POPUP_QUERIES.nextButtonId);
+    const previousButton = document.getElementById(POPUP_QUERIES.previousButtonId);
+    const dotsParent = document.getElementById(POPUP_QUERIES.dotsParentId);
     
     generateImages(project, dotsParent);
     attachButtonHandlers(nextButton, previousButton);
-    
-    const projectDescription = document.querySelector(`.${POPUP_CLASSES.description}`);
-    projectDescription.textContent = project.description;
 
-    const sourceCode = document.querySelector(`.${POPUP_CLASSES.source}`);
+    const projectDescription = document.getElementById(POPUP_QUERIES.descriptionId);
+    const descriptionContent = await loadFile(project.description);
+    if (descriptionContent) {
+        projectDescription.innerHTML = marked.parse(descriptionContent); 
+    }
+
+    const sourceCode = document.getElementById(POPUP_QUERIES.sourceId);
     if (sourceCode) {
+        sourceCode.style.display = "flex";
         sourceCode.href = "";
         if (project.source.length > 0)
             sourceCode.href = project.source;
+        else 
+            sourceCode.style.display = "none";
     }
 
-    const projectInfoContainer = document.querySelector(`.${POPUP_CLASSES.info}`);
+    const projectInfoContainer = document.getElementById(POPUP_QUERIES.infoId);
 
     generateRepresentationInfo(project.info, projectInfoContainer);
 }
@@ -135,7 +142,7 @@ document.addEventListener("keydown", (event) => {
         closePopup();
 })
 
-const closePopupButton = document.querySelector(`.${POPUP_CLASSES.closeButton}`);
+const closePopupButton = document.getElementById(POPUP_QUERIES.closeButtonId);
 closePopupButton.onclick = closePopup;
 
 popup.addEventListener("click", (event) => event.stopPropagation());

@@ -1,23 +1,26 @@
-export const POPUP_CLASSES = {
-    name: "project-popup__name",
+export const POPUP_QUERIES = {
+    popupId: "popup",
+    overlayId: "popup overlay",
 
-    fields: "project-popup__fields",
+    nameId: "popup project-name",
+
+    fieldsId: "popup project-fields",
     type: "fields__type",
     status: "pfields__status",
     development_period: "fields__development-period",
     
     currentImage: "image-panel__current-image",
-    previousButton: "image-panel__previous-button",
-    nextButton: "image-panel__next-button",
-    dotsParent: "images__dots",
+    previousButtonId: "popup project-previous-button",
+    nextButtonId: "popup project-next-button",
+    dotsParentId: "popup images-dots",
     dot: "dots__dot",
     selectedDot: "dots__dot__selected",
 
-    info: "project-representation__info",
-    description: "project-popup__description",  
-    source: "project-popup__source",
+    infoId: "popup project-representation-info",
+    descriptionId: "popup project-description",  
+    sourceId: "popup project-source",
 
-    closeButton: "button-container__close-button"
+    closeButtonId: "popup close-button"
 }
 
 export const REQUIRED_FIELDS = [

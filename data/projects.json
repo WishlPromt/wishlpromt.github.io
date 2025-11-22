@@ -2,10 +2,10 @@
     {
         "id": "secrets_of_anderia",
         "name": "Secrets of Anderia",
-        "img_src": "images/projects/secrets_of_anderia/soa_screen.png",
+        "img_src": "images\\projects\\secrets_of_anderia\\SoA-image.png",
         "img_alt": "Скрин из игры",
-        "about": "Метроидвания, делалась на Unity в течение полугода. Девлоги в тгк сбрасывал",
-        "description": "Метроидвания, делалась на Unity в течение полугода. Девлоги в тгк сбрасывал",
+        "about": "Метроидвания, делалась на Unity в течение полугода",
+        "description": "data\\projects_descriptions\\secrets_of_anderia.md",
 
         "type": "game",
         "status": "discontinued",
@@ -13,34 +13,43 @@
         "source": "https://github.com/WishlPromt/Secrets-of-Anderia",
 
         "images": {
-            "Yuno near campfire": "images/projects/secrets_of_anderia/soa_screen.png",
-            "Yuno fights": "images/projects/wishl_promt_bio/wishl_promt_bio.png",
-            "Main menu": "images/projects/nika_chan_bot/nika_chan_bot_avatar.png",
-            "Yufgfg": "images/projects/secrets_of_anderia/soa_screen.png",
-            "fggfghts": "images/projects/wishl_promt_bio/wishl_promt_bio.png",
-            "Maifgmenu": "images/projects/nika_chan_bot/nika_chan_bot_avatar.png"
+            "Yuno near campfire": "images\\projects\\secrets_of_anderia\\yuno_near_campfire.png",
+            "Main menu": "images\\projects\\secrets_of_anderia\\main_menu.png",
+            "Yuno near chest and slime": "images\\projects\\secrets_of_anderia\\yuno_near_chest_and_slime.png",
+            "Yuno near vases": "images\\projects\\secrets_of_anderia\\yuno_near_vases.png",
+            "Yuno versus skeleton": "images\\projects\\secrets_of_anderia\\yuno_versus_skeleton.png",
+            "Yuno near lever": "images\\projects\\secrets_of_anderia\\yuno_near_lever.png",
+            "Yuno versus goblin": "images\\projects\\secrets_of_anderia\\yuno_versus_goblin.png",
+            "Yuno versus mushroom": "images\\projects\\secrets_of_anderia\\yuno_versus_mushroom.png",
+            "Yuno versus king of slimes": "images\\projects\\secrets_of_anderia\\yuno_versus_king_of_slimes.png",
+            "Yuno near opened chest": "images\\projects\\secrets_of_anderia\\yuno_near_opened_chest.png",
+            "Yuno near chest": "images\\projects\\secrets_of_anderia\\yuno_near_chest.png"
         },
 
         "info": {
-            "PL": "C#",
             "engine": "Unity",
             "last_version": "0.2.1",
-            "platforms": "PC"
+            "platforms": "Windows, Linux"
         }
     },
 
     {
         "id": "wishl_promt_bio",
         "name": "WishlPromtBio",
-        "img_src": "images/projects/wishl_promt_bio/wishl_promt_bio.png",
+        "img_src": "images\\projects\\wishl_promt_bio\\wishl_promt_bio.png",
         "img_alt": "Этот сайт",
         "about": "Мой первый сайт. Глазам больно, но моим мозгам прикольно",
-        "description": "",
+        "description": "data\\projects_descriptions\\wishl_promt_bio.md",
 
         "type": "website",
         "status": "released",
-        "development_period":"17.09.2025 - ...",
+        "development_period":"17.09.2025 - 22.11.2025",
         "source": "https://github.com/WishlPromt/wishlpromt.github.io",
+
+        "images": {
+            "main page on desktop": "images\\projects\\wishl_promt_bio\\main_page.png",
+            "popup": "images\\projects\\wishl_promt_bio\\popup.png"
+        },
 
         "info": {
             "frontend": "HTML + CSS + JavaScript"
@@ -50,15 +59,25 @@
     {
         "id": "nika_chan_bot",
         "name": "NikaChanBot",
-        "img_src": "images/projects/nika_chan_bot/nika_chan_bot_avatar.png",
+        "img_src": "images\\projects\\nika_chan_bot\\nika_chan_bot_avatar.png",
         "img_alt": "Аватарка бота в тг",
         "about": "Телеграм-бот для чатов, была интегрирована LLM, хоть и криво",
-        "description": "",
+        "description": "data\\projects_descriptions\\nika_chan_bot.md",
         
+        "images": {
+            "nika_avatar": "images\\projects\\nika_chan_bot\\nika_chan_bot_avatar.png",
+            "start-work-balance": "images\\projects\\nika_chan_bot\\start-work-balance.png",
+            "shop": "images\\projects\\nika_chan_bot\\shop.png",
+            "inventory": "images\\projects\\nika_chan_bot\\inventory.png",
+            "collect": "images\\projects\\nika_chan_bot\\collect.png",
+            "card": "images\\projects\\nika_chan_bot\\card.png",
+            "profile": "images\\projects\\nika_chan_bot\\profile.png"
+        },
+
         "type": "bot",
         "status": "paused",
         "development_period": "02.2025 - 04.2025",
-        "source": "",
+        "source": "https://github.com/WishlPromt/Nika-Chan-Bot",
 
         "info": {
             "PL": "Python",

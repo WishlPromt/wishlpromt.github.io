@@ -16,15 +16,15 @@ function createGrid(parent) {
 
     const gridFragment = document.createDocumentFragment();
 
+    grid.appendChild(gridFragment);
+    parent.appendChild(grid);
+
     validProjects.forEach(project => {
         const card = createCard("div", project);
-        card.addEventListener("click", () => openProjectPopup(card.id));
+        card.addEventListener("click", async () => await openProjectPopup(card.id));
         card.setAttribute('data-clickable', 'true');
         gridFragment.appendChild(card);
     })
-
-    grid.appendChild(gridFragment);
-    parent.appendChild(grid);
 }
 
 function createCard(element, project) {
