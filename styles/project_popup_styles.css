@@ -216,7 +216,7 @@
 .project-representation__info {
     height: fit-content;
     width: 30%;
-    border: 5px, solid, var(--dark-purple);
+    border: 5px solid var(--dark-purple);
     border-radius: 15px;
 
     font-size: clamp(6px, 3vw, 14px); 
@@ -234,7 +234,7 @@
     display: flex;
     margin-right: auto;
     align-items: center;
-    border: 3px, solid, var(--dark-purple);
+    border: 3px solid var(--dark-purple);
     border-radius: 15px;
     width: fit-content;
     height: 35px;
@@ -255,23 +255,31 @@
 }
 
 .project-popup__description {
-    text-align: justify;
-    text-indent: 1em
+    text-align: left;
+    text-indent: 1em;
 }
 
 @media (max-width: 1280px) {
     .project-popup {
         transform: translate(-50%, -51.5%);
-        width: 90%;
+        width: 95%;
         height: 95%;
-        padding: 10px;
+        padding: 40px;
+    }
+    
+    .button-container__close-button::before,
+    .button-container__close-button::after {
+        width: 150%;
+        height: 30%;
     }
     .project-popup__name {
-        font-size: 42px;
         text-align: center;
     }
     .project-popup__fields {
         justify-content: center;
+    }
+    .project-popup__fields p {
+        font-size: 36px;
     }
     .project-popup__project-representation {
         flex-direction: column;

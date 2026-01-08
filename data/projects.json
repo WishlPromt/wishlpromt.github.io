@@ -2,7 +2,7 @@
     {
         "id": "secrets_of_anderia",
         "name": "Secrets of Anderia",
-        "img_src": "images\\projects\\secrets_of_anderia\\SoA-image.png",
+        "img_src": "images\\projects\\secrets_of_anderia\\SoA-image.webp",
         "img_alt": "Скрин из игры",
         "about": "Метроидвания, делалась на Unity в течение полугода",
         "description": "data\\projects_descriptions\\secrets_of_anderia.md",
@@ -13,17 +13,17 @@
         "source": "https://github.com/WishlPromt/Secrets-of-Anderia",
 
         "images": {
-            "Yuno near campfire": "images\\projects\\secrets_of_anderia\\yuno_near_campfire.png",
-            "Main menu": "images\\projects\\secrets_of_anderia\\main_menu.png",
-            "Yuno near chest and slime": "images\\projects\\secrets_of_anderia\\yuno_near_chest_and_slime.png",
-            "Yuno near vases": "images\\projects\\secrets_of_anderia\\yuno_near_vases.png",
-            "Yuno versus skeleton": "images\\projects\\secrets_of_anderia\\yuno_versus_skeleton.png",
-            "Yuno near lever": "images\\projects\\secrets_of_anderia\\yuno_near_lever.png",
-            "Yuno versus goblin": "images\\projects\\secrets_of_anderia\\yuno_versus_goblin.png",
-            "Yuno versus mushroom": "images\\projects\\secrets_of_anderia\\yuno_versus_mushroom.png",
-            "Yuno versus king of slimes": "images\\projects\\secrets_of_anderia\\yuno_versus_king_of_slimes.png",
-            "Yuno near opened chest": "images\\projects\\secrets_of_anderia\\yuno_near_opened_chest.png",
-            "Yuno near chest": "images\\projects\\secrets_of_anderia\\yuno_near_chest.png"
+            "Yuno near campfire": "images\\projects\\secrets_of_anderia\\yuno_near_campfire.webp",
+            "Main menu": "images\\projects\\secrets_of_anderia\\main_menu.webp",
+            "Yuno near chest and slime": "images\\projects\\secrets_of_anderia\\yuno_near_chest_and_slime.webp",
+            "Yuno near vases": "images\\projects\\secrets_of_anderia\\yuno_near_vases.webp",
+            "Yuno versus skeleton": "images\\projects\\secrets_of_anderia\\yuno_versus_skeleton.webp",
+            "Yuno near lever": "images\\projects\\secrets_of_anderia\\yuno_near_lever.webp",
+            "Yuno versus goblin": "images\\projects\\secrets_of_anderia\\yuno_versus_goblin.webp",
+            "Yuno versus mushroom": "images\\projects\\secrets_of_anderia\\yuno_versus_mushroom.webp",
+            "Yuno versus king of slimes": "images\\projects\\secrets_of_anderia\\yuno_versus_king_of_slimes.webp",
+            "Yuno near opened chest": "images\\projects\\secrets_of_anderia\\yuno_near_opened_chest.webp",
+            "Yuno near chest": "images\\projects\\secrets_of_anderia\\yuno_near_chest.webp"
         },
 
         "info": {
@@ -36,7 +36,7 @@
     {
         "id": "wishl_promt_bio",
         "name": "WishlPromtBio",
-        "img_src": "images\\projects\\wishl_promt_bio\\wishl_promt_bio.png",
+        "img_src": "images\\projects\\wishl_promt_bio\\wishl_promt_bio.webp",
         "img_alt": "Этот сайт",
         "about": "Мой первый сайт. Глазам больно, но моим мозгам прикольно",
         "description": "data\\projects_descriptions\\wishl_promt_bio.md",
@@ -47,8 +47,8 @@
         "source": "https://github.com/WishlPromt/wishlpromt.github.io",
 
         "images": {
-            "main page on desktop": "images\\projects\\wishl_promt_bio\\main_page.png",
-            "popup": "images\\projects\\wishl_promt_bio\\popup.png"
+            "main page on desktop": "images\\projects\\wishl_promt_bio\\main_page.webp",
+            "popup": "images\\projects\\wishl_promt_bio\\popup.webp"
         },
 
         "info": {
@@ -59,19 +59,18 @@
     {
         "id": "nika_chan_bot",
         "name": "NikaChanBot",
-        "img_src": "images\\projects\\nika_chan_bot\\nika_chan_bot_avatar.png",
+        "img_src": "images\\projects\\nika_chan_bot\\nika_chan_bot_avatar.webp",
         "img_alt": "Аватарка бота в тг",
         "about": "Телеграм-бот для чатов, была интегрирована LLM, хоть и криво",
         "description": "data\\projects_descriptions\\nika_chan_bot.md",
         
         "images": {
-            "nika_avatar": "images\\projects\\nika_chan_bot\\nika_chan_bot_avatar.png",
-            "start-work-balance": "images\\projects\\nika_chan_bot\\start-work-balance.png",
-            "shop": "images\\projects\\nika_chan_bot\\shop.png",
-            "inventory": "images\\projects\\nika_chan_bot\\inventory.png",
-            "collect": "images\\projects\\nika_chan_bot\\collect.png",
-            "card": "images\\projects\\nika_chan_bot\\card.png",
-            "profile": "images\\projects\\nika_chan_bot\\profile.png"
+            "start-work-balance": "images\\projects\\nika_chan_bot\\start-work-balance.webp",
+            "shop": "images\\projects\\nika_chan_bot\\shop.webp",
+            "inventory": "images\\projects\\nika_chan_bot\\inventory.webp",
+            "collect": "images\\projects\\nika_chan_bot\\collect.webp",
+            "card": "images\\projects\\nika_chan_bot\\card.webp",
+            "profile": "images\\projects\\nika_chan_bot\\profile.webp"
         },
 
         "type": "bot",
